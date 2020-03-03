@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+		<script th:src="@{/js/bootstrap.min.js}"></script>
+		<object th:include="fragments/fragment ::css" th:remove="tag"></object>
+		<object th:include="fragments/fragment ::js" th:remove="tag"></object>
+	</head>
+	<body>
+		<div th:replace="fragments/fragment :: addFlight"></div>
+			<br><div class="container-fluid"> </div>
+			<div class="row"> 
+				<div class="col-mid-6">
+					<div class="card">
+						<div class="card-header">Add Flight</div>
+						<div class="card-body">
+						<form th:action="@{'/flight/add/' + ${licenseNumber}}" th:object="${pilot}" method="POST">
+							<input type="hidden" th:field="*{licenseNumber}" />
+								<table>
+									<thead>
+										<tr>
+									<th style="text-align: center">No.</th>
+									<th style="text-align: center">Flight Number</th>
+									<th style="text-align: center">Origin</th>
+									<th style="text-align: center">Destination</th>
+									<th style="text-align: center">Time</th>
+									<th style="text-align: center">
+										<button type="submit" class="btn btn-primary" th:name="addRow">Add row</button>
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr class="success" th:each="flight,i : *{pilotFlight}" th:style="${i.even}">
+											<td th:text="${i.count}">1</td>
+											<td style="text-align: center">
+												<input th:field="*{pilotFlight[__${i.index}__].flightNumber}" type="text" th:name="flightNumber"/>
+											</td>
+											<td>
+												<input th:field="*{pilotFlight[__${i.index}__].origin}" type="text" th:name="origin"/>
+											</td>
+											<td>
+												<input th:field="*{pilotFlight[__${i.index}__].destination}" type="text" th:name="destination"/>
+											</td>
+											<td>
+												<input th:field="*{pilotFlight[__${i.index}__].time}" type="date" th:name="time" />
+											<td>
+												<button type="submit" class="btn btn-primary" name="removeRow" th:value="${i.index}">Remove Row</button>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<button type="submit" class="btn btn-primary" name="save">Submit</button>
+						</form>
+						</div>
+						</div>
+						</div>
+						</div>
+</body>
+</html>

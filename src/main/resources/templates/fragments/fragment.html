@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Home</title>
+		<head th:fragment="css">
+			<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+		</head>
+		<head th:fragment="js">
+		<script th:src="@{/js/bootstrap.min.js}"></script>
+		</head>
+	</head>
+	
+	<body>
+		<nav th:fragment="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<a class="navbar-brand" href="#">APAP</a>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="http://localhost:8080/">Home</a>
+				</li>
+				</ul>
+			</div>
+		</nav>
+		
+		<nav th:fragment="addPilot" class="navbar navbar-expand-lg navbar-dark bg-dark">
+   			<a class="navbar-brand" href="#">Add Pilot</a>
+   			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    			<ul class="navbar-nav mr-auto">
+     			<li class="nav-item active">
+      				<a class="nav-link" href="http://localhost:8080/">Home</a>
+     			</li>
+    			</ul>
+   			</div>
+  		</nav>
+		
+		<nav th:fragment="addFlight" class="navbar navbar-expand-lg navbar-dark bg-dark">
+   			<a class="navbar-brand" href="#">Add Flight</a>
+   			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    			<ul class="navbar-nav mr-auto">
+     			<li class="nav-item active">
+      				<a class="nav-link" href="http://localhost:8080/">Home</a>
+     			</li>
+    			</ul>
+   			</div>
+  		</nav>
+  
+  		<nav th:fragment="viewall-flight" class="navbar navbar-expand-lg navbar-dark bg-dark">
+   			<a class="navbar-brand" href="#">View All Flight</a>
+   			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    			<ul class="navbar-nav mr-auto">
+     			<li class="nav-item active">
+      				<a class="nav-link" href="http://localhost:8080/">Home</a>
+     			</li>
+    			</ul>
+   			</div>
+  		</nav>
+  
+    	<nav th:fragment="viewall-pilot" class="navbar navbar-expand-lg navbar-dark bg-dark">
+  			 <a class="navbar-brand" href="#">View All Pilot</a>
+   			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    			<ul class="navbar-nav mr-auto">
+     			<li class="nav-item active">
+      				<a class="nav-link" href="http://localhost:8080/">Home</a>
+     			</li>
+    			</ul>
+   			</div>
+  		</nav>
+  		
+  		<nav th:fragment="view-pilot" class="navbar navbar-expand-lg navbar-dark bg-dark">
+  			 <a class="navbar-brand" href="#">View Pilot</a>
+   			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    			<ul class="navbar-nav mr-auto">
+     			<li class="nav-item active">
+      				<a class="nav-link" href="http://localhost:8080/">Home</a>
+     			</li>
+    			</ul>
+   			</div>
+  		</nav>
+  		
+  		<nav th:fragment="delete" class="navbar navbar-expand-lg navbar-dark bg-dark">
+   			<a class="navbar-brand" href="#">Delete Info</a>
+   			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    			<ul class="navbar-nav mr-auto">
+     			<li class="nav-item active">
+      				<a class="nav-link" href="http://localhost:8080/">Home</a>
+     			</li>
+    			</ul>
+   			</div>
+  		</nav>
+  		
+  		<nav th:fragment="error" class="navbar navbar-expand-lg navbar-dark bg-dark">
+   			<a class="navbar-brand" href="#">Error Info</a>
+   			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    			<ul class="navbar-nav mr-auto">
+     			<li class="nav-item active">
+      				<a class="nav-link" href="http://localhost:8080/">Home</a>
+     			</li>
+    			</ul>
+   			</div>
+  		</nav>
+  		
+  		<nav th:fragment="update-flight" class="navbar navbar-expand-lg navbar-dark bg-dark">
+   			<a class="navbar-brand" href="#">Update Flight</a>
+   			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    			<ul class="navbar-nav mr-auto">
+     			<li class="nav-item active">
+      				<a class="nav-link" href="http://localhost:8080/">Home</a>
+     			</li>
+    			</ul>
+   			</div>
+  		</nav>
+  		
+  		<nav th:fragment="update-pilot" class="navbar navbar-expand-lg navbar-dark bg-dark">
+   			<a class="navbar-brand" href="#">Update Pilot</a>
+   			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    			<ul class="navbar-nav mr-auto">
+     			<li class="nav-item active">
+      				<a class="nav-link" href="http://localhost:8080/">Home</a>
+     			</li>
+    			</ul>
+   			</div>
+  		</nav>
+  		
+  		<nav th:fragment="update" class="navbar navbar-expand-lg navbar-dark bg-dark">
+   			<a class="navbar-brand" href="#">Update Info</a>
+   			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    			<ul class="navbar-nav mr-auto">
+     			<li class="nav-item active">
+      				<a class="nav-link" href="http://localhost:8080/">Home</a>
+     			</li>
+    			</ul>
+   			</div>
+  		</nav>
+  		
+  		<nav th:fragment="add" class="navbar navbar-expand-lg navbar-dark bg-dark">
+   			<a class="navbar-brand" href="#">Add Info</a>
+   			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    			<ul class="navbar-nav mr-auto">
+     			<li class="nav-item active">
+      				<a class="nav-link" href="http://localhost:8080/">Home</a>
+     			</li>
+    			</ul>
+   			</div>
+  		</nav>
+  		
+	</body>
+</html>
